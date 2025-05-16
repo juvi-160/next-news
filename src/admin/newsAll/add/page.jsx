@@ -21,7 +21,7 @@ const AddNews = () => {
 
   // -------------------------------
   // API ENDPOINTS
-  const BASE_URL = 'http://localhost:3000'; // Change to your actual base URL
+  const BASE_URL = 'http://localhost:5000'; // Change to your actual base URL
   const getCategories = async () => {
     return await axios.get(`${BASE_URL}/categories`);
   };

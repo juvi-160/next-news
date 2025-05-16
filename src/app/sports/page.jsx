@@ -29,7 +29,7 @@ const Sports = () => {
 
     const fetchCategories = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/categories');
+        const res = await axios.get('http://localhost:5000/categories');
         setCategories(res.data.categories);
       } catch (err) {
         console.error("Error fetching categories:", err);

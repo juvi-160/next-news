@@ -23,7 +23,7 @@ const AddCategory = () => {
     if (Object.keys(newErrors).length > 0) return setErrors(newErrors);
 
     try {
-      const response = await axios.post('http://localhost:3000/categories/create', { name: formData.name });
+      const response = await axios.post(' http://localhost:5000/categories/create', { name: formData.name });
 
       console.log('Response:', response.data); // Add this for debugging
 

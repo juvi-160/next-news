@@ -15,7 +15,7 @@ const India = () => {
     const fetchNews = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:3000/news');
+        const response = await axios.get('http://localhost:5000/news');
         console.log(response.data); // should be an array
         const worldNews = response.data.filter(newsItem => newsItem.categoryId === 1);
 

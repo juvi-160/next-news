@@ -12,7 +12,7 @@ const TotalCategory = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/categories/count'); // Full backend URL
+        const response = await axios.get('http://localhost:5000/categories/count'); // Full backend URL
         setCount(response.data.count);
         setLoading(false);
       } catch (err) {

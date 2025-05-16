@@ -15,7 +15,7 @@ const LatestWorld = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/news');
+        const res = await axios.get('http://localhost:5000/news');
         const filtered = res.data
           .filter(item => item.categoryId === BUSINESS_CATEGORY_ID)
           .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
@@ -39,7 +39,7 @@ const LatestWorld = () => {
     <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-8 p-4">
       {businessNews.map((item, idx) => (
         <div key={idx} className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <Link to={`/news/${item.id}`}>
+          <Link href={`/news/${item.id}`}>
             <img
               src={item.image ? `http://localhost:3000/uploads/${item.image}` : fallbackImage}
               onError={(e) => {
@@ -55,7 +55,7 @@ const LatestWorld = () => {
               {item.title}
             </h5>
             <Link
-              to={`/news/${item.id}`}
+              href={`/news/${item.id}`}
               className="mt-auto inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700 transition-colors"
             >
               Read more

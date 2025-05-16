@@ -13,7 +13,7 @@ const NewsStats = ({ category, title }) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:3000/news/count`); // Full backend URL
+        const response = await axios.get(`http://localhost:5000/news/count`); // Full backend URL
         
         if (response.data.success) {
           // For total count use response.data.total

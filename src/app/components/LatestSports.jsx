@@ -16,7 +16,7 @@ const LatestSports = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/news');
+        const res = await axios.get('http://localhost:5000/news');
         const filtered = res.data
           .filter(item => item.categoryId === BUSINESS_CATEGORY_ID)
           .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))

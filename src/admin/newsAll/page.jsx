@@ -12,7 +12,7 @@ const NewsAll = () => {
   // Fetch all news
   const fetchNews = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/news'); // Adjust the API route as needed
+      const res = await axios.get('http://localhost:5000/news'); // Adjust the API route as needed
       setNewsData(res.data);
       setLoading(false);
     } catch (err) {
@@ -24,7 +24,7 @@ const NewsAll = () => {
   // Fetch all categories
   const fetchCategories = async () => {
   try {
-    const res = await axios.get('http://localhost:3000/categories');
+    const res = await axios.get('http://localhost:5000/categories');
     setCategories(res.data.categories); // FIX HERE
   } catch (err) {
     console.error("Error fetching categories:", err);
